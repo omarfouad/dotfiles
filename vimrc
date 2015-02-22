@@ -12,6 +12,12 @@ Plugin 'https://github.com/kien/ctrlp.vim.git'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'git://github.com/airblade/vim-gitgutter.git'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'git://github.com/msanders/snipmate.vim.git'
+Plugin 'https://github.com/mattn/emmet-vim.git'
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'https://github.com/marijnh/tern_for_vim.git'
+
 filetype plugin indent on
 
 set number
@@ -25,12 +31,9 @@ set nobackup
 set noswapfile
 set mouse=a
 set laststatus=2
-set tabstop=4
-set autoindent
 set copyindent
-set shiftwidth=4
 set shiftround
-set showmatch
+set noet ci pi sts=0 sw=4 ts=4
 set ignorecase
 set smartcase
 set smarttab
@@ -44,18 +47,22 @@ set wildmode=longest:full,full
 set title
 set visualbell
 set noerrorbells
+set lazyredraw
+set ttyfast
+set ttymouse=xterm
 
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
 
 
-let g:airline_theme='luna'
+let g:airline_theme='badwolf'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_echo=0
 let g:airline_symbols.linenr = '¶'
-
+let g:airline#extensions#whitespace#enabled=0
 function! AirlineInit()
 	let g:airline_section_a = airline#section#create_left(['mode','branch', 'iminsert'])
 	let g:airline_section_b = airline#section#create_left(['filetype','paste','%f'])
@@ -67,7 +74,6 @@ endfunction
 autocmd User AirlineAfterInit call AirlineInit()
 
 """ Mappings """
-map <C-O> :NERDTreeToggle ~/<CR>
-
-
-
+map <C-n> :NERDTreeToggle<CR>
+imap <C-J> <Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger
