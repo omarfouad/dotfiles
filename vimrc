@@ -24,7 +24,7 @@ set number
 syntax enable
 set background=dark
 let g:solarized_termcolors = 256
-colorscheme solarized
+colorscheme spacegray
 set nowrap
 set history=1000
 set nobackup
@@ -75,5 +75,3 @@ autocmd User AirlineAfterInit call AirlineInit()
 
 """ Mappings """
 map <C-n> :NERDTreeToggle<CR>
-imap <C-J> <Plug>snipMateNextOrTrigger
-smap <C-J> <Plug>snipMateNextOrTrigger
