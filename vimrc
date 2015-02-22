@@ -15,9 +15,7 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'git://github.com/msanders/snipmate.vim.git'
 Plugin 'https://github.com/mattn/emmet-vim.git'
-"Plugin 'Valloric/YouCompleteMe'
-Plugin 'https://github.com/marijnh/tern_for_vim.git'
-
+Plugin 'https://github.com/ervandew/supertab.git'
 filetype plugin indent on
 
 set number
@@ -51,10 +49,16 @@ set lazyredraw
 set ttyfast
 set ttymouse=xterm
 
+"""" CTRLP Settings """"
+let g:ctrlp_working_path_mode = 'r'
+
+"""" Super Tab Settings """"
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
+"""" Airline Settings """"
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
-
 
 let g:airline_theme='badwolf'
 let g:airline_powerline_fonts=1
