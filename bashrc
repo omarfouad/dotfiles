@@ -4,3 +4,6 @@ export TERM=xterm-256color
 if !has('gui_running')
 	 set t_Co=256
 endif
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
