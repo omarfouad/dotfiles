@@ -10,6 +10,7 @@ alias ls="ls -alG"
 alias dummypush="cd /Users/omarfouad/work/git/dummify; python gitdummy.py"
 alias vim="/usr/local/Cellar/macvim/7.4-73_1/MacVim.app/Contents/MacOS/Vim"
 alias vim="/usr/local/Cellar/macvim/7.4-73_1/MacVim.app/Contents/MacOS/Vim"
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }

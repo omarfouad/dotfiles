@@ -22,5 +22,8 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
+echo "Installing Vundle Plugins..."
+git clone https://github.com/VundleVim/Vundle.vim.git ~/dotfiles/vim/bundle/vundle 
+vim +PluginInstall +qall;
 
 echo "Completed.... :)"
